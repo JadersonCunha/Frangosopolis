@@ -137,6 +137,10 @@ header{
     color: var(--primary);
 }
 
+.nav-menu .btn:hover{
+    color: #fff;
+}
+
 .hero-wrapper{
     background: linear-gradient(135deg, #fff9f5, white);
     padding-top: 80px;
