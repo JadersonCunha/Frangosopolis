@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" href="assets/frango_1.jpg" as="image">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
     <title>Frango Assado</title>
   </head>
   <body>
@@ -125,7 +125,7 @@
         <img src="assets/cozinha.jpg" alt="cozinha" loading="lazy">
         <article>
             <h2>Nossa tempero</h2>
-            <p>Na Frangosópolis, utilizamos temperos artesanais e ingredientes frescos para criar pratos únicos e saborosos. Nossa cozinha é o coração da nossa história, onde cada prato é preparado com paixão e dedicação.</p>
+            <p>Na Frango Assado, utilizamos temperos artesanais e ingredientes frescos para criar pratos únicos e saborosos. Nossa cozinha é o coração da nossa história, onde cada prato é preparado com paixão e dedicação.</p>
 
             <ul>
                 <li>🧆 <strong> Ingredientes frescos e selecionados</strong></li>
@@ -171,8 +171,22 @@
         <p class="copy">&copy; 2026 Frango Assado | Todos os direitos reservados.</p>
     </footer>
 
-    <script src="main.js">
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+      const navLinks = document.querySelectorAll('.nav-menu a');
       
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     </script>
   </body>
 </html>
